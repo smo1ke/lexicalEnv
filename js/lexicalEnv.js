@@ -7,17 +7,17 @@
 // const result2 = myCounter();  // => 10
 // const result3 = myCounter();  // => 15
 
-function customCounter() {
+function customCounter(step) {
   let count = 0;
 
   function counter() {
-    count = count + 5;
+    count = count + step;
     return count;
   }
   return counter;
 }
 
-const result1 = customCounter();
+const result1 = customCounter(5);
 console.log("result1:>> ", result1());
 console.log("result1 :>> ", result1());
 console.log("result1 :>> ", result1());
@@ -29,17 +29,15 @@ console.log("result1 :>> ", result1());
 // и
 // шаг изменения счетчика (в примере с занятия это 1).
 
-function customCounter1() {
-  let count = 1;
-
+function customCounter1(count, step) {
   function counter() {
-    count = count + 5;
+    count = count + step;
     return count;
   }
   return counter;
 }
 
-const result2 = customCounter1();
+const result2 = customCounter1(1, 5);
 console.log("result2:>> ", result2());
 console.log("result2 :>> ", result2());
 console.log("result2 :>> ", result2());
